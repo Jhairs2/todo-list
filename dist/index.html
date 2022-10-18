@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo-list</title>
 </head>
+
 <body>
+    <div class="page-container">
+        <header class="header-container">
+            <span id="header-title">Todo-List</span>
+        </header>
+        <div class="alert-bar">
+            <div class="today-bar">
+                <span class="today-header">Today</span>
+            </div>
+            <div class="week-bar">
+                <span class="week-header">Upcoming Week</span>
+            </div>
+            <div class="urgent-bar">
+                <span class="urgent-header">Urgent Tasks</span>
+            </div>
+        </div>
+
+        <main class="content"></main>
+    </div>
     <script src="main.js"></script>
 </body>
+
 </html>
