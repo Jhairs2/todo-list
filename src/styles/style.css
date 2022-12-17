@@ -18,7 +18,7 @@ body {
 .page-container {
     display: grid;
     grid-template-rows: 4.5rem auto;
-    grid-template-columns: 16.5rem auto;
+    grid-template-columns: 18.5rem auto;
     width: 100%;
     height: 100%;
 }
@@ -68,4 +68,19 @@ header {
 #menu li:hover {
     background-color: rgba(93, 92, 92, 0.8);
     cursor: pointer;
+}
+
+
+.content {
+    grid-area: 2 / 2 / -1 / -1;
+    display: grid;
+    grid-auto-rows: 65px;
+    gap: 1em;
+    overflow-y: scroll;
+    padding: 3em;
+}
+
+.todo-container {
+    border: 2px solid black;
+    
 }
