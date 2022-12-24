@@ -13,6 +13,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name][contenthash].js',
         clean: true,
+        assetModuleFilename: '[name][ext]',
     },
 
     module: {
@@ -24,6 +25,11 @@ module.exports = {
                     "style-loader",
                     "css-loader"],
             },
+            
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+        },
         ],
     },
 

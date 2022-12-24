@@ -20,8 +20,12 @@ const saveTabs = () => {
         });
     }
 
+    const deleteTab = (tabIndex) => {
+        delete _tabs[tabIndex]
+    }
 
-    return { saveTab, getTabs, addIndex };
+
+    return { saveTab, getTabs, addIndex, deleteTab};
 }
 
 export default saveTabs;
