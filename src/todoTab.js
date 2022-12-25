@@ -2,6 +2,8 @@
 // are going to have. At a minimum they should have a 
 // title, description, dueDate and priority. You might 
 // also want to include notes or even a checklist.
+import editImg from './assets/clipboard-edit-outline.svg';
+import trashImg from './assets/trash-can-outline.svg';
 
 const createTodoBox = (inputTitle = "Blank", inputDescription = "Blank", inputDueDate = "Blank") => {
     // Create div container for todo
@@ -41,11 +43,22 @@ const createTodoBox = (inputTitle = "Blank", inputDescription = "Blank", inputDu
     return dueDateSection
     
     }
-
+    const createIcons = () => {
+        const iconSection = document.createElement('div');
+        const edit = document.createElement('img');
+        const trash = document.createElement('img');
+        iconSection.classList.add('todo-icons');
+        edit.src = editImg;
+        edit.id = 'edit'
+        trash.src = trashImg
+        trash.id = 'trash'
+        iconSection.append(edit, trash);
+        return iconSection;
+        }
     // add content to tab and then to conetent div
     const createContent = () => {
         const box = createBox();
-        box.append(createTitle(), createDescription(), createDueDate());
+        box.append(createTitle(), createDescription(), createDueDate(), createIcons());
         return box 
     }
 

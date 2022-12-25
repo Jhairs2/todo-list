@@ -1,16 +1,18 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
- html {
+html {
     width: 100%;
     height: 100%;
-} 
+}
 
 body {
-    background-color:#d4d4d8;
+    background-color: #d4d4d8;
     width: 100%;
     height: 100%;
 }
@@ -30,27 +32,35 @@ header {
     align-items: center;
     justify-content: space-between;
     font-size: 2rem;
-    
+
 }
 
-.header-info,
-.header-title {
-    padding: 1em;
+.header-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
 }
+
+#header-menu {
+    height: 3.5rem;
+}
+
 
 .header-info {
     display: flex;
-    gap: 2em; 
+    gap: 2em;
 }
 
 .side-bar {
     background-color: #a1a1aa;
-    grid-column:  1 / 2;
+    grid-column: 1 / 2;
     grid-row: 2 / -1;
-    
+
     font-size: 1.5rem;
 }
-
+#header-menu:hover {
+    height: 5rem;
+}
 #menu {
     display: flex;
     flex-direction: column;
@@ -80,9 +90,22 @@ header {
     padding: 3em;
 }
 
+.big {
+    grid-area: 2 / 1 / -1 / -1;
+    display: grid;
+    grid-auto-rows: 65px;
+    gap: 1em;
+    overflow-y: scroll;
+    padding: 3em;
+}
+
 .todo-container {
     border: 2px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+img {
+    height: 2rem;
 }

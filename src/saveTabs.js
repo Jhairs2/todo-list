@@ -8,8 +8,14 @@ const saveTabs = () => {
         
     }
 
-    const getTabs = () => _tabs
-
+    const getTabs = () => {
+    if(!_tabs) {
+        console.log("no todos");
+    }
+    else {
+        return _tabs;
+    }
+}
 
     const addIndex = () => {
         const data = document.querySelectorAll('.todo-container');
@@ -21,7 +27,7 @@ const saveTabs = () => {
     }
 
     const deleteTab = (tabIndex) => {
-        delete _tabs[tabIndex]
+         _tabs.splice(tabIndex, 1);
     }
 
 
