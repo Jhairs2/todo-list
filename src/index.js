@@ -68,6 +68,7 @@ trash.forEach(tab => {
     tab.addEventListener('click', (e)=> {
     save.deleteTab(e.currentTarget.parentNode.parentNode.dataset.id);
     e.currentTarget.parentNode.parentNode.remove();
-    
+    save.addIndex();
+    console.log(save.getTabs());
 })
 })
