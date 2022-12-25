@@ -16,7 +16,7 @@
   \********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"*, *::after, *::before {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n\\r\\n html {\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n} \\r\\n\\r\\nbody {\\r\\n    background-color:#d4d4d8;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\n.page-container {\\r\\n    display: grid;\\r\\n    grid-template-rows: 4.5rem auto;\\r\\n    grid-template-columns: 18.5rem auto;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\nheader {\\r\\n    grid-area: 1 / 1 / 2 / -1;\\r\\n    background-color: #71717a;\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    justify-content: space-between;\\r\\n    font-size: 2rem;\\r\\n    \\r\\n}\\r\\n\\r\\n.header-info,\\r\\n.header-title {\\r\\n    padding: 1em;\\r\\n}\\r\\n\\r\\n.header-info {\\r\\n    display: flex;\\r\\n    gap: 2em; \\r\\n}\\r\\n\\r\\n.side-bar {\\r\\n    background-color: #a1a1aa;\\r\\n    grid-column:  1 / 2;\\r\\n    grid-row: 2 / -1;\\r\\n    \\r\\n    font-size: 1.5rem;\\r\\n}\\r\\n\\r\\n#menu {\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    gap: 1.5em;\\r\\n    list-style: none;\\r\\n    padding-top: 2em;\\r\\n}\\r\\n\\r\\n#menu li {\\r\\n    font-size: 1.75rem;\\r\\n    padding-left: 1em;\\r\\n\\r\\n}\\r\\n\\r\\n#menu li:hover {\\r\\n    background-color: rgba(93, 92, 92, 0.8);\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n\\r\\n.content {\\r\\n    grid-area: 2 / 2 / -1 / -1;\\r\\n    display: grid;\\r\\n    grid-auto-rows: 65px;\\r\\n    gap: 1em;\\r\\n    overflow-y: scroll;\\r\\n    padding: 3em;\\r\\n}\\r\\n\\r\\n.todo-container {\\r\\n    border: 2px solid black;\\r\\n    display: flex;\\r\\n    justify-content: space-around;\\r\\n    align-items: center;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/styles/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"*,\\r\\n*::after,\\r\\n*::before {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n\\r\\nhtml {\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\nbody {\\r\\n    background-color: #d4d4d8;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\n.page-container {\\r\\n    display: grid;\\r\\n    grid-template-rows: 4.5rem auto;\\r\\n    grid-template-columns: 18.5rem auto;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\nheader {\\r\\n    grid-area: 1 / 1 / 2 / -1;\\r\\n    background-color: #71717a;\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    justify-content: space-between;\\r\\n    font-size: 2rem;\\r\\n\\r\\n}\\r\\n\\r\\n.header-menu-container {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    gap: 1.5em;\\r\\n}\\r\\n\\r\\n#header-menu {\\r\\n    height: 3.5rem;\\r\\n}\\r\\n\\r\\n\\r\\n.header-info {\\r\\n    display: flex;\\r\\n    gap: 2em;\\r\\n}\\r\\n\\r\\n.side-bar {\\r\\n    background-color: #a1a1aa;\\r\\n    grid-column: 1 / 2;\\r\\n    grid-row: 2 / -1;\\r\\n\\r\\n    font-size: 1.5rem;\\r\\n}\\r\\n#header-menu:hover {\\r\\n    height: 5rem;\\r\\n}\\r\\n#menu {\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    gap: 1.5em;\\r\\n    list-style: none;\\r\\n    padding-top: 2em;\\r\\n}\\r\\n\\r\\n#menu li {\\r\\n    font-size: 1.75rem;\\r\\n    padding-left: 1em;\\r\\n\\r\\n}\\r\\n\\r\\n#menu li:hover {\\r\\n    background-color: rgba(93, 92, 92, 0.8);\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n\\r\\n.content {\\r\\n    grid-area: 2 / 2 / -1 / -1;\\r\\n    display: grid;\\r\\n    grid-auto-rows: 65px;\\r\\n    gap: 1em;\\r\\n    overflow-y: scroll;\\r\\n    padding: 3em;\\r\\n}\\r\\n\\r\\n.big {\\r\\n    grid-area: 2 / 1 / -1 / -1;\\r\\n    display: grid;\\r\\n    grid-auto-rows: 65px;\\r\\n    gap: 1em;\\r\\n    overflow-y: scroll;\\r\\n    padding: 3em;\\r\\n}\\r\\n\\r\\n.todo-container {\\r\\n    border: 2px solid black;\\r\\n    display: flex;\\r\\n    justify-content: space-around;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\nimg {\\r\\n    height: 2rem;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/styles/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/dropMenu.js":
+/*!*************************!*\
+  !*** ./src/dropMenu.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst dropmenu = () => { \r\nconst menu = document.querySelector('.side-bar');\r\nconst img = document.querySelector('#header-menu');\r\nconst content = document.querySelector('.content'); \r\n\r\nimg.addEventListener('click', ()=>{\r\n    if (menu.style.visibility === \"hidden\") {\r\n            menu.style.visibility = \"visible\";\r\n        content.classList.remove(\"big\");\r\n          } else {\r\n            menu.style.visibility = \"hidden\";\r\n            content.classList.add('big'); \r\n          }\r\n})\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dropmenu);\n\n//# sourceURL=webpack://todo-list/./src/dropMenu.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _saveTabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./saveTabs */ \"./src/saveTabs.js\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n/* harmony import */ var _todoTab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./todoTab */ \"./src/todoTab.js\");\n\r\n\r\n\r\n\r\n\r\nconst content = document.querySelector('.content');\r\nconst div = (0,_todoTab__WEBPACK_IMPORTED_MODULE_2__[\"default\"])().createContent();\r\nconst div2 = (0,_todoTab__WEBPACK_IMPORTED_MODULE_2__[\"default\"])().createContent();\r\nconst tabs = document.querySelectorAll('li');\r\nlet save = (0,_saveTabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\nsave.saveTab(div);\r\nsave.saveTab(div2)\r\n\r\ncontent.append(div,div2);\r\nsave.addIndex();\r\nconsole.log(save.getTabs());\r\n\r\nconst example = document.querySelectorAll('[data-id]');\r\nexample.forEach(e => {\r\n    e.addEventListener('click', (b)=> {\r\n    save.deleteTab(b.currentTarget.dataset.id);\r\n    console.log(b.currentTarget.dataset.id);\r\n    console.log(save.getTabs())\r\n    removeAll();\r\n})\r\n})\r\n\r\ntabs.forEach(tab => {\r\n    tab.addEventListener(\"click\", (e) => {\r\n        if(e.target.id == 'Home' ) {\r\n            removeAll();\r\n            // const list = save.getTabs() \r\n            // for(let i = 0; i < list.length; i++) {\r\n            //     content.append(list[i]);\r\n            // }\r\n        }\r\n        \r\n    })\r\n})\r\n\r\nfunction removeAll() {\r\n    content.innerHTML = \"\";\r\n}\r\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _saveTabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./saveTabs */ \"./src/saveTabs.js\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n/* harmony import */ var _todoTab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./todoTab */ \"./src/todoTab.js\");\n/* harmony import */ var _dropMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dropMenu */ \"./src/dropMenu.js\");\n/* harmony import */ var _assets_menu_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/menu.svg */ \"./src/assets/menu.svg\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst menuImg = document.getElementById('header-menu');\r\nmenuImg.src = _assets_menu_svg__WEBPACK_IMPORTED_MODULE_4__;\r\n\r\n(0,_dropMenu__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\nconst content = document.querySelector('.content');\r\nconst div = (0,_todoTab__WEBPACK_IMPORTED_MODULE_2__[\"default\"])().createContent();\r\nconst div2 = (0,_todoTab__WEBPACK_IMPORTED_MODULE_2__[\"default\"])().createContent();\r\nconst tabs = document.querySelectorAll('li');\r\nlet save = (0,_saveTabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\nsave.saveTab(div);\r\nsave.saveTab(div2)\r\n\r\ncontent.append(div,div2);\r\nsave.addIndex();\r\nconsole.log(save.getTabs());\r\n\r\nconst example = document.querySelectorAll('[data-id]');\r\n\r\n\r\ntabs.forEach(tab => {\r\n    tab.addEventListener(\"click\", (e) => {\r\n       switch(e.target.id) {\r\n\r\n        case 'Home':\r\n            removeAll();\r\n            getPageTabs(save.getTabs())\r\n            break;\r\n\r\n       \r\n       \r\n        case 'Today':\r\n            removeAll();\r\n            break;\r\n\r\n\r\n        case 'week':\r\n            removeAll();\r\n            break;\r\n        }\r\n\r\n        \r\n    })\r\n})\r\n\r\nfunction removeAll() {\r\n    content.innerHTML = \"\";\r\n}\r\n\r\nfunction getPageTabs(tabs) {\r\n\r\n            for(let i = 0; i < tabs.length; i++) {\r\n                content.append(tabs[i]);\r\n            }\r\n}\r\n\r\n\r\nconst trash = document.querySelectorAll('#trash');\r\n\r\n\r\n\r\ntrash.forEach(tab => {\r\n    tab.addEventListener('click', (e)=> {\r\n    save.deleteTab(e.currentTarget.parentNode.parentNode.dataset.id);\r\n    e.currentTarget.parentNode.parentNode.remove();\r\n    \r\n})\r\n})\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sav
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Homepage tabs will be saved here\r\n\r\nconst saveTabs = () => {\r\n    let _tabs = [];\r\n\r\n    const saveTab = (tab) => {\r\n       return _tabs.push(tab);\r\n        \r\n    }\r\n\r\n    const getTabs = () => _tabs\r\n\r\n\r\n    const addIndex = () => {\r\n        const data = document.querySelectorAll('.todo-container');\r\n        let index = 0;\r\n        data.forEach(element => {\r\n            element.dataset.id = `${index}`;\r\n            index++;\r\n        });\r\n    }\r\n\r\n    const deleteTab = (tabIndex) => {\r\n        delete _tabs[tabIndex]\r\n    }\r\n\r\n\r\n    return { saveTab, getTabs, addIndex, deleteTab};\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (saveTabs);\r\n\r\n\n\n//# sourceURL=webpack://todo-list/./src/saveTabs.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Homepage tabs will be saved here\r\n\r\nconst saveTabs = () => {\r\n    let _tabs = [];\r\n\r\n    const saveTab = (tab) => {\r\n       return _tabs.push(tab);\r\n        \r\n    }\r\n\r\n    const getTabs = () => {\r\n    if(!_tabs) {\r\n        console.log(\"no todos\");\r\n    }\r\n    else {\r\n        return _tabs;\r\n    }\r\n}\r\n\r\n    const addIndex = () => {\r\n        const data = document.querySelectorAll('.todo-container');\r\n        let index = 0;\r\n        data.forEach(element => {\r\n            element.dataset.id = `${index}`;\r\n            index++;\r\n        });\r\n    }\r\n\r\n    const deleteTab = (tabIndex) => {\r\n         _tabs.splice(tabIndex, 1);\r\n    }\r\n\r\n\r\n    return { saveTab, getTabs, addIndex, deleteTab};\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (saveTabs);\r\n\r\n\n\n//# sourceURL=webpack://todo-list/./src/saveTabs.js?");
 
 /***/ }),
 
@@ -136,7 +146,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Brainstorm what kind of properties your todo-items \r\n// are going to have. At a minimum they should have a \r\n// title, description, dueDate and priority. You might \r\n// also want to include notes or even a checklist.\r\n\r\nconst createTodoBox = (inputTitle = \"Blank\", inputDescription = \"Blank\", inputDueDate = \"Blank\") => {\r\n    // Create div container for todo\r\n    const createBox = () => {  \r\n    const toDo = document.createElement('div');\r\n    toDo.classList.add('todo-container');\r\n    toDo.dataset.id = \"\";\r\n    return toDo;\r\n    }\r\n    \r\n    // Create title section\r\n    const createTitle = () => {  \r\n    const title = document.createElement('span')\r\n    title.classList.add('todo-title');\r\n    title.textContent = inputTitle;\r\n    return title;\r\n    }\r\n\r\n\r\n    // Create description section\r\n    const createDescription = () => {\r\n    const descriptionSection = document.createElement('div');\r\n    const description = document.createElement('p');\r\n    description.classList.add('todo-description');\r\n    description.textContent = inputDescription;\r\n    descriptionSection.append(description);\r\n    return descriptionSection;\r\n    }\r\n\r\n    // Create date section\r\n    const createDueDate = () => {\r\n    const dueDateSection = document.createElement('div');\r\n    const dueDate = document.createElement('p');\r\n    dueDate.classList.add('due-Date');\r\n    dueDate.textContent = inputDueDate\r\n    dueDateSection.append(dueDate);\r\n    return dueDateSection\r\n    \r\n    }\r\n\r\n    // add content to tab and then to conetent div\r\n    const createContent = () => {\r\n        const box = createBox();\r\n        box.append(createTitle(), createDescription(), createDueDate());\r\n        return box \r\n    }\r\n\r\n\r\n    return {createContent};\r\n    \r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createTodoBox);\r\n\n\n//# sourceURL=webpack://todo-list/./src/todoTab.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_clipboard_edit_outline_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/clipboard-edit-outline.svg */ \"./src/assets/clipboard-edit-outline.svg\");\n/* harmony import */ var _assets_trash_can_outline_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/trash-can-outline.svg */ \"./src/assets/trash-can-outline.svg\");\n// Brainstorm what kind of properties your todo-items \r\n// are going to have. At a minimum they should have a \r\n// title, description, dueDate and priority. You might \r\n// also want to include notes or even a checklist.\r\n\r\n\r\n\r\nconst createTodoBox = (inputTitle = \"Blank\", inputDescription = \"Blank\", inputDueDate = \"Blank\") => {\r\n    // Create div container for todo\r\n    const createBox = () => {  \r\n    const toDo = document.createElement('div');\r\n    toDo.classList.add('todo-container');\r\n    toDo.dataset.id = \"\";\r\n    return toDo;\r\n    }\r\n    \r\n    // Create title section\r\n    const createTitle = () => {  \r\n    const title = document.createElement('span')\r\n    title.classList.add('todo-title');\r\n    title.textContent = inputTitle;\r\n    return title;\r\n    }\r\n\r\n\r\n    // Create description section\r\n    const createDescription = () => {\r\n    const descriptionSection = document.createElement('div');\r\n    const description = document.createElement('p');\r\n    description.classList.add('todo-description');\r\n    description.textContent = inputDescription;\r\n    descriptionSection.append(description);\r\n    return descriptionSection;\r\n    }\r\n\r\n    // Create date section\r\n    const createDueDate = () => {\r\n    const dueDateSection = document.createElement('div');\r\n    const dueDate = document.createElement('p');\r\n    dueDate.classList.add('due-Date');\r\n    dueDate.textContent = inputDueDate\r\n    dueDateSection.append(dueDate);\r\n    return dueDateSection\r\n    \r\n    }\r\n    const createIcons = () => {\r\n        const iconSection = document.createElement('div');\r\n        const edit = document.createElement('img');\r\n        const trash = document.createElement('img');\r\n        iconSection.classList.add('todo-icons');\r\n        edit.src = _assets_clipboard_edit_outline_svg__WEBPACK_IMPORTED_MODULE_0__;\r\n        edit.id = 'edit'\r\n        trash.src = _assets_trash_can_outline_svg__WEBPACK_IMPORTED_MODULE_1__\r\n        trash.id = 'trash'\r\n        iconSection.append(edit, trash);\r\n        return iconSection;\r\n        }\r\n    // add content to tab and then to conetent div\r\n    const createContent = () => {\r\n        const box = createBox();\r\n        box.append(createTitle(), createDescription(), createDueDate(), createIcons());\r\n        return box \r\n    }\r\n\r\n\r\n    return {createContent};\r\n    \r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createTodoBox);\r\n\n\n//# sourceURL=webpack://todo-list/./src/todoTab.js?");
+
+/***/ }),
+
+/***/ "./src/assets/clipboard-edit-outline.svg":
+/*!***********************************************!*\
+  !*** ./src/assets/clipboard-edit-outline.svg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"clipboard-edit-outline.svg\";\n\n//# sourceURL=webpack://todo-list/./src/assets/clipboard-edit-outline.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/menu.svg":
+/*!*****************************!*\
+  !*** ./src/assets/menu.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"menu.svg\";\n\n//# sourceURL=webpack://todo-list/./src/assets/menu.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/trash-can-outline.svg":
+/*!******************************************!*\
+  !*** ./src/assets/trash-can-outline.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"trash-can-outline.svg\";\n\n//# sourceURL=webpack://todo-list/./src/assets/trash-can-outline.svg?");
 
 /***/ })
 
@@ -191,6 +231,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +257,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
