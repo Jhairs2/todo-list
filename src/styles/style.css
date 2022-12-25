@@ -54,6 +54,22 @@ header {
     gap: 2em;
 }
 
+.add-container {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+#add-todo {
+    transition: all 0.2s ease-in-out;
+}
+
+#add-todo:hover {
+    filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);;
+    cursor: pointer;
+    height: 2.2rem;
+}
+
 .side-bar {
     background-color: #a1a1aa;
     grid-column: 1 / 2;
@@ -115,6 +131,12 @@ header {
     background-color: #f1f5f9;
 }
 
+.todo-container:hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
 img {
     height: 2rem;
 }
@@ -130,7 +152,7 @@ img {
 }
 
 .sign-in:hover {
-    background-color: rgba(93, 92, 92, 0.8);
+   background-color: rgba(93, 92, 92, 0.8);
    cursor: pointer;
    transform: scale(1.1);
     
