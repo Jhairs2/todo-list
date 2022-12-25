@@ -3,10 +3,13 @@ import './styles/style.css';
 import createTodoBox from './todoTab';
 import dropmenu from './dropMenu';
 import menuIcon from './assets/menu.svg';
+import formHandlingAndData from './userInput';
 
+const dialog = document.querySelector('.modal');
+dialog.showModal();
 const menuImg = document.getElementById('header-menu');
 menuImg.src = menuIcon;
-
+formHandlingAndData().openModal();
 dropmenu();
 const content = document.querySelector('.content');
 const div = createTodoBox().createContent();
@@ -72,3 +75,5 @@ trash.forEach(tab => {
     console.log(save.getTabs());
 })
 })
+
+

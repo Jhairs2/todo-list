@@ -33,6 +33,28 @@
 
         </div>
 
+        <dialog class="modal">
+            <form class="user-info">
+                <span id="form-title">Add todo</span>
+                <div class="title-date-container">
+                    <div>
+                        <label for="input-title">Todo:</label>
+                        <input type="text" name="title" id="input-title" placeholder="wash dishes" required>
+                    </div>
+                    <div>
+                        <label for="input-date">Date:</label>
+                        <input type="date" name="date" id="input-date" required>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <label for="input-description">Description:</label>
+                    <textarea name="description" id="input-description" cols="80" rows="20"></textarea>
+                </div>
+                <button class="new-todo" type="submit">ADD TODO</button>
+            </form>
+            <button id="close-modal">X</button>
+        </dialog>
+
         <div class="content big"></div>
     </div>
 </body>
