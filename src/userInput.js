@@ -1,5 +1,4 @@
 import createTodoBox from "./todoTab";
-import saveTabs from './saveTabs';
 
 const formHandlingAndData = () => {
 const modal = document.querySelector('.modal');
@@ -28,21 +27,10 @@ const modal = document.querySelector('.modal');
     
         }
 
-    const submitFormData = () => {
-        const content = document.querySelector('.content');
-        const submitButton = document.querySelector('.new-todo');
-        const form = document.querySelector('.user-info');
-        submitButton.addEventListener('click', (e)=> {
-            e.preventDefault();
-            const tab = createTodoBox(formData().formTitle.value, formData().formDescription.value, formData().formDate.value).createContent();
-            content.append(tab);
-            form.reset();
-            modal.close();
-            ;
-        })
-        
-    }
-    return {openAndCloseModal, submitFormData}
+    
+ 
+    
+    return {openAndCloseModal, formData}
 }
 
 export default formHandlingAndData;
