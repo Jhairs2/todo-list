@@ -6,11 +6,11 @@ const dropmenu = () => {
     img.addEventListener('click', () => {
         if (menu.style.visibility === "hidden") {
             menu.style.visibility = "visible";
-            img.classList.add('selected');
+            img.classList.add('selected-menu');
             content.classList.remove("big");
         } else {
             menu.style.visibility = "hidden";
-            img.classList.remove('selected');
+            img.classList.remove('selected-menu');
             content.classList.add('big');
         }
     })

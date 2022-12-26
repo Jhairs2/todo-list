@@ -83,7 +83,7 @@ header {
     filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);
 }
 
-.selected {
+.selected-menu {
     filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);
 }
 #menu {
@@ -106,6 +106,9 @@ header {
     cursor: pointer;
 }
 
+.selected-tab {
+    background-color: rgba(93, 92, 92, 0.8);
+}
 .content {
     grid-area: 2 / 2 / -1 / -1;
     display: grid;

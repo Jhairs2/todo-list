@@ -5,14 +5,15 @@ import dropmenu from './dropMenu';
 import menuIcon from './assets/menu.svg';
 import formHandlingAndData from './userInput';
 
-const dialog = document.querySelector('.modal');
-dialog.showModal();
 const menuImg = document.getElementById('header-menu');
 menuImg.src = menuIcon;
-formHandlingAndData().openModal();
+formHandlingAndData().openAndCloseModal();
+formHandlingAndData().submitFormData();
 dropmenu();
+
+
 const content = document.querySelector('.content');
-const div = createTodoBox().createContent();
+const div = createTodoBox('dsfafa','fafa','faf').createContent();
 const div2 = createTodoBox().createContent();
 const tabs = document.querySelectorAll('li');
 let save = saveTabs();
@@ -31,6 +32,8 @@ tabs.forEach(tab => {
        switch(e.target.id) {
 
         case 'Home':
+            removeSelected();
+            tab.classList.add('selected-tab');
             removeAll();
             getPageTabs(save.getTabs())
             break;
@@ -38,11 +41,15 @@ tabs.forEach(tab => {
        
        
         case 'Today':
+            removeSelected();
+            tab.classList.add('selected-tab');
             removeAll();
             break;
 
 
-        case 'week':
+        case 'Week':
+            removeSelected();
+            tab.classList.add('selected-tab');
             removeAll();
             break;
         }
@@ -62,7 +69,11 @@ function getPageTabs(tabs) {
             }
 }
 
-
+function removeSelected() {
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('selected-tab');
+    }
+}
 const trash = document.querySelectorAll('#trash');
 
 
