@@ -1,8 +1,10 @@
 import editImg from './assets/clipboard-edit-outline.svg';
 import trashImg from './assets/trash-can-outline.svg';
+import infoImg from './assets/information-outline.svg';
+
 
 const createTodoContainer = (todoTitle, todoDueDate) => {
-    
+
     const content = document.querySelector('.content');
 
     // Create div container for todo
@@ -34,15 +36,18 @@ const createTodoContainer = (todoTitle, todoDueDate) => {
         const iconSection = document.createElement('div');
         const edit = document.createElement('img');
         const trash = document.createElement('img');
+        const info = document.createElement('img');
         iconSection.classList.add('todo-icons');
         edit.src = editImg;
-        edit.id = 'edit'
-        trash.src = trashImg
-        trash.id = 'trash'
-        iconSection.append(edit, trash);
+        edit.id = 'edit';
+        trash.src = trashImg;
+        trash.id = 'trash';
+        info.src = infoImg;
+        info.id = 'info';
+        iconSection.append(edit, trash, info);
         return iconSection;
     }
-   const addID = () => {
+    const addID = () => {
         const tab = document.querySelectorAll('.todo-container');
         let i = 0;
         tab.forEach(todo => {
@@ -52,11 +57,14 @@ const createTodoContainer = (todoTitle, todoDueDate) => {
         console.log('done!')
     }
 
-    
+
     const clearContent = () => {
         const content = document.querySelector('.content');
-        content.innerHTML = "";
-    }
+        while (content.firstChild) {
+            content.removeChild(content.firstChild);
+        };
+    };
+
 
     // add content to tab and then to div
     const createContent = () => {

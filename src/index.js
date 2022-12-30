@@ -1,71 +1,49 @@
 import './styles/style.css'
 import { todoLibrary, createTodo } from './todoMod'
 import dropmenu from './dropMenu';
+import eventListeners from './eventListeners';
 
 
-
+const events = eventListeners();
+events.addInteractivity();
 const Library = todoLibrary()
-
-const modal = document.querySelector('.modal');
-const openButton = document.querySelector('#add-todo');
-const closeButton = document.querySelector('#close-modal');
 const submitButton = document.querySelector('.new-todo');
-const body = document.querySelector('body',);
 
 
-
-body.addEventListener('click', deleteOrEdit);
-openButton.addEventListener('click', openForm)
-closeButton.addEventListener('click', closeForm);
 submitButton.addEventListener('click', submitFormData)
 
 
 dropmenu();
 
-
 function submitFormData(e) {
+    
+   
     const form = document.querySelector('.user-info');
-    const title = document.querySelector('#input-title');
+    const ftitle = document.querySelector('#input-title');
     const dueDate = document.querySelector('#input-date');
     const description = document.querySelector('#input-description');
-    
     e.preventDefault();
-    Library.addTodo(title.value, description.value, dueDate.value);
-    Library.updateTodoList();
-    form.reset();
-    closeForm()
 
+    if (submitButton.classList.contains("edit")) {
+        Library.getTodoList()[events.getPrevTodo()].title = ftitle.value;
 
-}
+        Library.updateTodoList();
+        form.reset();
 
-
-
-
-function openForm(e) {
-
-    modal.showModal()
-}
-
-function closeForm() {
-    modal.close()
-}
-
-function deleteOrEdit(e) {
-    if (e.target.id == 'trash') {
-        Library.deleteTodo(e.offsetParent);
-        console.log(Library.getTodoList())
+       events.closeModal();
+        
+    } 
+    else if (!(submitButton.classList.contains("edit")))
+    {
+      
+        Library.addTodo(ftitle.value, description.value, dueDate.value);
+        Library.updateTodoList();
+        form.reset();
+        events.closeModal();
     }
+    
 }
 
-function edit() {
-    if(Library.getTodoList().length == 1) {
-    const title = document.querySelectorAll('.todo-title');
-    title.addEventListener('click', (e)=> {
-        title.contentEditable = 'true';
-        e.style.backgroundColor = 'white';
-    })
-} else {
-    return 
-}
-}
-edit()
+
+  
+
