@@ -1,12 +1,15 @@
 
-
 const eventListeners = () => {
+
     let prevTodo;
     const modal = document.querySelector('.modal')
     const openButton = document.querySelector('#add-todo');
     const closeButton = document.querySelector('#close-modal');
     const formTitle = document.querySelector('#form-title');
     const submitButton = document.querySelector('.new-todo');
+    const formInputTitle = document.querySelector('#input-title');
+    const formInputDueDate = document.querySelector('#input-date');
+    const formInputDescription = document.querySelector('#input-description');
     const body = document.querySelector('body');
 
 
@@ -20,6 +23,11 @@ const eventListeners = () => {
             submitButton.classList.remove("edit");
             submitButton.textContent = 'ADD TODO';
             formTitle.textContent = 'Add Todo';
+        
+            formInputTitle.placeholder = "wash dishes";
+            formInputDueDate.placeholder = 'mm / dd / yyyy';
+            formInputDescription.placeholder = "add a description...";
+
             modal.showModal()
 
         } else {
@@ -41,11 +49,24 @@ const eventListeners = () => {
 
     }
 
-    const editTodo = () => {
+    const setInputFields = (array, e) => {
+
+        formInputTitle.value = "";
+        formInputTitle.placeholder = array[e.target.parentNode.parentNode.dataset.id].title;
+
+        formInputDueDate.value = "";
+        formInputDueDate.placeholder = array[e.target.parentNode.parentNode.dataset.id].dueDate;
+
+        formInputDescription.value = "";
+        formInputDescription.placeholder = array[e.target.parentNode.parentNode.dataset.id].description;
+    }
+
+    const editTodo = (array) => {
         const editButton = document.querySelectorAll('#edit');
 
         editButton.forEach(todo => {
             todo.addEventListener('click', (e) => {
+                setInputFields(array, e);
                 formTitle.textContent = 'Edit Todo';
                 submitButton.textContent = 'EDIT TODO';
                 submitButton.classList.add("edit");
@@ -53,6 +74,7 @@ const eventListeners = () => {
             })
         })
     }
+
 
 
     const lastTodoClicked = () => {
@@ -65,7 +87,7 @@ const eventListeners = () => {
 
     const showDetails = (array) => {
         const info = document.querySelectorAll('#info');
-       
+
         info.forEach(todo => {
             todo.addEventListener('click', (e) => {
 
@@ -83,7 +105,7 @@ const eventListeners = () => {
 
                 form.style.display = 'none';
                 details.style.display = "";
-              
+
                 modal.showModal();
             })
         })

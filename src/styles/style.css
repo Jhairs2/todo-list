@@ -47,7 +47,7 @@ header {
     height: 3.5rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    
+
 }
 
 
@@ -67,7 +67,8 @@ header {
 }
 
 #add-todo:hover {
-    filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);;
+    filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);
+    ;
     cursor: pointer;
     height: 2.2rem;
 }
@@ -78,6 +79,7 @@ header {
     grid-row: 2 / -1;
     font-size: 1.5rem;
 }
+
 #header-menu:hover {
 
     filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);
@@ -86,6 +88,7 @@ header {
 .selected-menu {
     filter: invert(95%) sepia(8%) saturate(48%) hue-rotate(201deg) brightness(97%) contrast(92%);
 }
+
 #menu {
     display: flex;
     flex-direction: column;
@@ -100,7 +103,30 @@ header {
 
 }
 
-#menu li:hover {
+#menu>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.home-count, 
+.today-count, 
+.week-count,
+.projects-count {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #71717a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#menu>div:hover {
     transition: all 0.3s ease-in-out;
     background-color: rgba(93, 92, 92, 0.8);
     cursor: pointer;
@@ -109,6 +135,7 @@ header {
 .selected-tab {
     background-color: rgba(93, 92, 92, 0.8);
 }
+
 .content {
     grid-area: 2 / 2 / -1 / -1;
     display: grid;
@@ -125,7 +152,7 @@ header {
     gap: 1em;
     overflow-y: scroll;
     padding: 3em;
-    
+
 }
 
 .todo-container {
@@ -143,11 +170,12 @@ header {
     transform: scale(1.05);
 }
 
-.todo-container > * {
+.todo-container>* {
     width: 150px;
     height: auto;
     overflow-block: auto;
 }
+
 img {
     height: 2rem;
 }
@@ -163,10 +191,10 @@ img {
 }
 
 .sign-in:hover {
-   background-color: rgba(93, 92, 92, 0.8);
-   cursor: pointer;
-   transform: scale(1.1);
-    
+    background-color: rgba(93, 92, 92, 0.8);
+    cursor: pointer;
+    transform: scale(1.1);
+
 }
 
 
@@ -178,10 +206,12 @@ img {
     cursor: pointer;
     height: 2.3rem;
 }
+
 .todo-icons {
     position: relative;
     right: 5%
 }
+
 .modal {
     padding: 2em;
     top: 50%;
@@ -196,6 +226,19 @@ img {
 
 .modal::backdrop {
     background: rgba(0, 0, 0, 0.7);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5rem;
+}
+
+.details > span {
+    font-weight: bold;
 }
 
 #input-title {
@@ -214,7 +257,7 @@ img {
 .description-container {
     display: flex;
     gap: 0.5em;
-    
+
 }
 
 #input-description {
@@ -249,7 +292,7 @@ img {
 }
 
 
-#close-modal { 
+#close-modal {
     position: absolute;
     top: 1%;
     right: 1%;

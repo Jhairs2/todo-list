@@ -25,10 +25,22 @@
         </header>
         <div class="side-bar" style="visibility: hidden">
             <ul id="menu">
-                <li id="Home" class="selected-tab">Home</li>
-                <li id="Today">Today</li>
-                <li id="Week">Week</li>
-                <li id="Projects">Projects</li>
+                <div id="Home" class="selected-tab">
+                    <li id="Home">Home</li>
+                    <p class="home-count">0</p>
+                </div>
+                <div id="Today">
+                    <li id="Today">Today</li>
+                    <p class="today-count">0</p>
+                </div>
+                <div id="Week">
+                    <li id="Week">Week</li>
+                    <p class="week-count">0</p>
+                </div>
+                <div>
+                    <li id="Projects">Projects</li>
+                    <p class="projects-count">0</p>
+                </div>
             </ul>
 
         </div>
@@ -51,7 +63,9 @@
                     </div>
                     <div>
                         <label for="input-date">Date:</label>
-                        <input type="date" name="date" id="input-date" required>
+                        <input type="text" name="date" id="input-date"
+                            onfocus="(this.type='date')"
+                            onblur="(this.type='text')">
                     </div>
                 </div>
                 <div class="description-container">

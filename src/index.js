@@ -9,8 +9,6 @@ const Library = todoLibrary()
 const events = eventListeners();
 events.addInteractivity();
 formValidation(Library, events).formInteractivity();
-
-
-dropmenu();
+dropmenu().menuInteractivity(Library);
 
 
