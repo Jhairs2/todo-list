@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+
     mode: 'development',
 
     entry: {
@@ -14,6 +15,7 @@ module.exports = {
         filename: '[name][contenthash].js',
         clean: true,
         assetModuleFilename: '[name][ext]',
+
     },
 
     module: {

@@ -17,13 +17,16 @@ const todoLibrary = () => {
 
     const getTodoList = () => todoArray;
 
+
     const updateTodoList = () => {
         createTodoContainer().clearContent();
+        sortLibrary();
         for (let i = 0; i < getTodoList().length; i++) {
             createTodoContainer(getTodoList()[i].title, getTodoList()[i].dueDate).createContent();
         }
         removeTodoFromPage();
         eventListeners().editTodo();
+        eventListeners().showDetails(todoArray);
     }
 
     const addTodo = (title, description, dueDate) => {
@@ -35,6 +38,13 @@ const todoLibrary = () => {
         updateTodoList();
     }
 
+    const sortLibrary = () => {
+        todoArray = getTodoList().sort((a, b) => {
+            let da = new Date(a.dueDate),
+                db = new Date(b.dueDate)
+            return da - db;
+        })
+    }
     function removeTodoFromPage() {
         const trash = document.querySelectorAll('#trash');
         trash.forEach(todo => {

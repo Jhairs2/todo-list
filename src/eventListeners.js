@@ -30,9 +30,11 @@ const eventListeners = () => {
 
     const closeModal = () => {
         const form = document.querySelector('.user-info');
-        const dc = document.querySelector('.details-container')
-        if (dc) {
-            dc.remove();
+        const dc = document.querySelector('.details');
+        if (dc.classList.contains('open')) {
+            dc.classList.remove('open');
+            dc.style.display = 'none';
+            form.style.display = "";
         }
         modal.close();
         form.reset();
@@ -52,11 +54,38 @@ const eventListeners = () => {
         })
     }
 
+
     const lastTodoClicked = () => {
         body.addEventListener('click', (e) => {
-            if (e.target.id == "edit") {
-               prevTodo = e.target.parentNode.parentNode.dataset.id;
+            if (e.target.id == "edit" || e.target.id == "info") {
+                prevTodo = e.target.parentNode.parentNode.dataset.id;
             }
+        })
+    }
+
+    const showDetails = (array) => {
+        const info = document.querySelectorAll('#info');
+       
+        info.forEach(todo => {
+            todo.addEventListener('click', (e) => {
+
+                const form = document.querySelector('.user-info');
+                const details = document.querySelector('.details');
+                const todoTitle = document.querySelector('.detail-info-title');
+                const todoDescription = document.querySelector('.detail-info-description');
+                const todoDate = document.querySelector('.detail-info-date');
+
+                details.classList.add('open');
+
+                todoTitle.textContent = `${array[e.target.parentNode.parentNode.dataset.id].title}`;
+                todoDescription.textContent = `${array[e.target.parentNode.parentNode.dataset.id].description}`;
+                todoDate.textContent = `${array[e.target.parentNode.parentNode.dataset.id].dueDate}`;
+
+                form.style.display = 'none';
+                details.style.display = "";
+              
+                modal.showModal();
+            })
         })
     }
 
@@ -67,26 +96,9 @@ const eventListeners = () => {
 
     }
 
-    const createDetailsContainer = () => {
-        const div = document.createElement('div');
-        div.classList.add('details-container');
-        return div;
-    }
 
-    const showDetails = () => {
-        const container = document.querySelectorAll('.todo-container')
-        container.forEach(todo => {
-            todo.addEventListener('click', () => {
-                const modal = document.querySelector('.modal');
-                const form = document.querySelector('.user-info');
-                form.style.display = 'none';
-                modal.append(createDetailsContainer());
-                modal.showModal();
-            })
-        })
-    }
 
-    return { showDetails, openModal, closeModal, editTodo, addInteractivity, getPrevTodo };
+    return { showDetails, openModal, closeModal, editTodo, addInteractivity, getPrevTodo, showDetails };
 }
 
 export default eventListeners;
