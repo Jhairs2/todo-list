@@ -27,6 +27,7 @@ const formValidation = (array, events) => {
             array.getTodoList()[events.getPrevTodo()].dueDate = formDueDate.value;
             array.getTodoList()[events.getPrevTodo()].description = formDescription.value;
 
+            array.sortLibrary();
             array.updateTodoList();
             console.log(array[events.getPrevTodo()]);
             savedStorage().saveTodo(events.getPrevTodo(), array.getTodoList()[events.getPrevTodo()]);
