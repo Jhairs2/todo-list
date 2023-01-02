@@ -62,6 +62,7 @@ const formValidation = (array, events) => {
         formDueDate.onfocus = () => {
             formDueDate.type = 'date';
             formDueDate.readOnly = false;
+            formDueDate.showPicker();
         }
 
         formDueDate.onblur = () => {
