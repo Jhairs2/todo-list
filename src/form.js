@@ -53,8 +53,22 @@ const formValidation = (array, events) => {
 
     const formInteractivity = () => {
         submitButton.addEventListener('click', submitFormData)
+        dateFormFix();
     }
 
+    const dateFormFix = () => {
+        const formDueDate = document.querySelector('#input-date');
+
+        formDueDate.onfocus = () => {
+            formDueDate.type = 'date';
+            formDueDate.readOnly = false;
+        }
+
+        formDueDate.onblur = () => {
+            formDueDate.type = 'text';
+            formDueDate.readOnly = true;
+        }
+    }
 
 
     return { formInteractivity }
