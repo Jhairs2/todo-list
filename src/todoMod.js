@@ -6,9 +6,9 @@ import createTodoContainer from "./createTodoDom";
 import eventListeners from "./eventListeners";
 import { parseISO, isToday, isSameWeek } from "date-fns";
 
-const createTodo = (title, description, dueDate) => {
+const createTodo = (title, description, dueDate, checked = false) => {
 
-    return { title, description, dueDate };
+    return { title, description, dueDate, checked };
 }
 
 const todoLibrary = () => {
@@ -27,11 +27,32 @@ const todoLibrary = () => {
         sortLibrary();
         for (let i = 0; i < getTodoList().length; i++) {
             createTodoContainer(getTodoList()[i].title, getTodoList()[i].dueDate).createContent();
+
+            if (todoArray[i].checked) {
+                const todo = document.querySelectorAll(".todo-container");
+                const checkbox = document.querySelectorAll("#todo-check");
+
+                todo[i].classList.add("strike");
+                checkbox[i].checked = "true";
+            }
+            else if(todoArray[i].checked = false){
+                const todo = document.querySelectorAll(".todo-container");
+                const checkbox = document.querySelectorAll("#todo-check");
+
+                todo[i].classList.remove("strike");
+                checkbox[i].checked = "false";
+            }
+
+            console.log(todoArray[i])
         }
+
+
+
         countOfTodos();
         removeTodoFromPage();
         eventListeners().editTodo(todoArray);
         eventListeners().showDetails(todoArray);
+        eventListeners().checkTodo(todoArray);
     }
 
     const addTodo = (title, description, dueDate) => {
@@ -69,17 +90,33 @@ const todoLibrary = () => {
         for (let i = 0; i < todoArray.length; i++) {
             if (isToday(parseISO(todoArray[i].dueDate))) {
                 createTodoContainer(getTodoList()[i].title, getTodoList()[i].dueDate).createContent();
-                removeTodoFromPage();
-                eventListeners().editTodo(todoArray);
-                eventListeners().showDetails(todoArray);
 
+                if (todoArray[i].checked) {
+                    const todo = document.querySelectorAll(".todo-container");
+                    const checkbox = document.querySelectorAll("#todo-check")
+
+                    todo[i].classList.add("strike");
+                    checkbox[i].checked = "true";
+                }
+                else if(todoArray[i].checked = false) {
+                    const todo = document.querySelectorAll(".todo-container");
+                    const checkbox = document.querySelectorAll("#todo-check")
+
+                    todo[i].classList.remove("strike");
+                    checkbox[i].checked = "false";
+                }
             }
+
+
             else {
                 continue;
             }
 
         }
-
+        removeTodoFromPage();
+        eventListeners().editTodo(todoArray);
+        eventListeners().showDetails(todoArray);
+        eventListeners().checkTodo(todoArray);
     }
 
     const WeekCheck = () => {
@@ -89,16 +126,34 @@ const todoLibrary = () => {
         for (let i = 0; i < todoArray.length; i++) {
             if (isSameWeek(Date.now(), parseISO(todoArray[i].dueDate))) {
                 createTodoContainer(getTodoList()[i].title, getTodoList()[i].dueDate).createContent();
-                removeTodoFromPage();
-                eventListeners().editTodo(todoArray);
-                eventListeners().showDetails(todoArray);
+
+                if (todoArray[i].checked) {
+                    const todo = document.querySelectorAll(".todo-container");
+                    const checkbox = document.querySelectorAll("#todo-check")
+
+                    todo[i].classList.add("strike");
+                    checkbox[i].checked = "true";
+                }
+                else if(todoArray[i].checked = false) {
+                    const todo = document.querySelectorAll(".todo-container");
+                    const checkbox = document.querySelectorAll("#todo-check")
+
+                    todo[i].classList.remove("strike");
+                    checkbox[i].checked = "false";
+                }
             }
+
+
             else {
                 continue;
             }
 
         }
 
+        removeTodoFromPage();
+        eventListeners().editTodo(todoArray);
+        eventListeners().showDetails(todoArray);
+        eventListeners().checkTodo(todoArray);
     }
 
 
@@ -122,14 +177,14 @@ const todoLibrary = () => {
             }
         }
 
-            homeCount.textContent = `${todoArray.length}`;
-            todayListCount.textContent = `${todayCount.length}`;
-            weekListCount.textContent = `${weekCount.length}`;
+        homeCount.textContent = `${todoArray.length}`;
+        todayListCount.textContent = `${todayCount.length}`;
+        weekListCount.textContent = `${weekCount.length}`;
 
-        }
+    }
 
 
-        return { addTodo, deleteTodo, getTodoList, todayCheck, WeekCheck, updateTodoList };
-    };
+    return { addTodo, deleteTodo, getTodoList, todayCheck, WeekCheck, updateTodoList };
+};
 
-    export { createTodo, todoLibrary };
+export { createTodo, todoLibrary };

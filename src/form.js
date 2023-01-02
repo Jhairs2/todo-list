@@ -1,3 +1,4 @@
+import { isPast, isToday, parseISO } from "date-fns";
 import dropmenu from "./dropMenu";
 const formValidation = (array, events) => {
     const divs = document.querySelectorAll('#menu div');
@@ -10,6 +11,13 @@ const formValidation = (array, events) => {
         const formDescription = document.querySelector('#input-description');
 
         e.preventDefault();
+
+
+        if (formTitle.value == "" || formDueDate.value == "" ||
+            ((isPast(parseISO(formDueDate.value))) & (!isToday(parseISO(formDueDate.value))))) {
+            console.log("error")
+            return
+        }
 
         if (submitButton.classList.contains("edit")) {
 

@@ -110,8 +110,8 @@ header {
     padding-right: 1em;
 }
 
-.home-count, 
-.today-count, 
+.home-count,
+.today-count,
 .week-count,
 .projects-count {
     width: 25px;
@@ -180,6 +180,27 @@ img {
     height: 2rem;
 }
 
+
+.todo-title {
+    overflow: scroll;
+}
+
+.strike {
+    background-color:  rgba(32, 32, 32, 0.4);
+    position: relative;
+}
+
+.strike:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    background: black;
+    content: "";
+    width: 100%;
+    display: block;
+}
+
 .sign-in {
     border: none;
     border-radius: 10px;
@@ -202,7 +223,9 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
-#trash:hover {
+#trash:hover,
+#edit:hover,
+#info:hover {
     cursor: pointer;
     height: 2.3rem;
 }
@@ -235,9 +258,14 @@ img {
     align-items: center;
     gap: 1em;
     font-size: 1.5rem;
+    overflow-y: scroll;
 }
 
-.details > span {
+.detail-info-description {
+    overflow-y: scroll;
+}
+
+.details>span {
     font-weight: bold;
 }
 

@@ -22,6 +22,17 @@ const createTodoContainer = (todoTitle, todoDueDate) => {
         return title;
     }
 
+    const createCheck = () => {
+        const checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.name = "todo-check";
+        checkbox.id = "todo-check";
+        checkbox.checked = false
+
+        return checkbox;
+
+    }
+
     // Create date section
     const createDueDate = () => {
         const dueDateSection = document.createElement('div');
@@ -69,7 +80,7 @@ const createTodoContainer = (todoTitle, todoDueDate) => {
     // add content to tab and then to div
     const createContent = () => {
         const box = createContainer();
-        box.append(createTitle(), createDueDate(), createIcons());
+        box.append(createCheck(), createTitle(), createDueDate(), createIcons());
         content.append(box);
         addID();
     };

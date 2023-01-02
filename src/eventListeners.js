@@ -23,7 +23,7 @@ const eventListeners = () => {
             submitButton.classList.remove("edit");
             submitButton.textContent = 'ADD TODO';
             formTitle.textContent = 'Add Todo';
-        
+
             formInputTitle.placeholder = "wash dishes";
             formInputDueDate.placeholder = 'mm / dd / yyyy';
             formInputDescription.placeholder = "add a description...";
@@ -111,6 +111,28 @@ const eventListeners = () => {
         })
     }
 
+    const checkTodo = (array) => {
+        const checkbox = document.querySelectorAll("#todo-check")
+
+
+        checkbox.forEach(box => {
+
+            box.addEventListener("click", (e) => {
+                if (e.target.checked) {
+
+                    array[e.target.parentNode.dataset.id].checked = true
+                    e.target.parentNode.classList.add("strike");
+                    console.log(array[e.target.parentNode.dataset.id].checked)
+                }
+                else {
+                    array[e.target.parentNode.dataset.id].checked = false;
+                    e.target.parentNode.classList.remove("strike");
+                }
+            })
+        })
+
+    }
+
     const addInteractivity = () => {
         openButton.addEventListener('click', openModal);
         closeButton.addEventListener('click', closeModal);
@@ -120,7 +142,7 @@ const eventListeners = () => {
 
 
 
-    return { showDetails, openModal, closeModal, editTodo, addInteractivity, getPrevTodo, showDetails };
+    return { showDetails, openModal, closeModal, editTodo, addInteractivity, checkTodo, getPrevTodo, showDetails };
 }
 
 export default eventListeners;
