@@ -1,5 +1,7 @@
 import { isPast, isToday, parseISO } from "date-fns";
 import dropmenu from "./dropMenu";
+import savedStorage from "./storage";
+
 const formValidation = (array, events) => {
     const divs = document.querySelectorAll('#menu div');
 
@@ -26,6 +28,8 @@ const formValidation = (array, events) => {
             array.getTodoList()[events.getPrevTodo()].description = formDescription.value;
 
             array.updateTodoList();
+            console.log(array[events.getPrevTodo()]);
+            savedStorage().saveTodo(events.getPrevTodo(), array.getTodoList()[events.getPrevTodo()]);
             form.reset();
 
             events.closeModal();

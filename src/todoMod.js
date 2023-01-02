@@ -4,6 +4,7 @@
 // also want to include notes or even a checklist.
 import createTodoContainer from "./createTodoDom";
 import eventListeners from "./eventListeners";
+import savedStorage from "./storage";
 import { parseISO, isToday, isSameWeek } from "date-fns";
 
 const createTodo = (title, description, dueDate, checked = false) => {
@@ -13,6 +14,14 @@ const createTodo = (title, description, dueDate, checked = false) => {
 
 const todoLibrary = () => {
     let todoArray = [];
+    
+    if(savedStorage().getLengthOfStorage() == 0) {
+        todoArray = []
+    } else {
+        todoArray = savedStorage().getStorage();
+    }
+    
+    
     const todayCount = [];
     const weekCount = [];
 
@@ -57,10 +66,20 @@ const todoLibrary = () => {
 
     const addTodo = (title, description, dueDate) => {
         todoArray.push(createTodo(title, description, dueDate));
+        saveTodoToStorage();
+        console.log(todoArray);
+        
+    }
+
+    const saveTodoToStorage = () => {
+        for(let i = 0; i < todoArray.length; i++ ) {
+            savedStorage().saveTodo(i, todoArray[i])
+        }
     }
 
     const deleteTodo = (todoIndex) => {
         todoArray.splice(todoIndex, 1);
+        savedStorage().removeTodo(todoIndex);
         updateTodoList();
 
     }
@@ -184,7 +203,7 @@ const todoLibrary = () => {
     }
 
 
-    return { addTodo, deleteTodo, getTodoList, todayCheck, WeekCheck, updateTodoList };
+    return { addTodo, deleteTodo, getTodoList, todayCheck, WeekCheck, sortLibrary, saveTodoToStorage, updateTodoList };
 };
 
 export { createTodo, todoLibrary };

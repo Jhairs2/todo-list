@@ -50,14 +50,13 @@ const dropmenu = () => {
                         break;
 
                     case 'Today':
-                        console.log(e);
+                        
                         removeClass();
                         divs[1].classList.add("selected-tab");
                         todoArray.todayCheck();
                         break;
 
                     case 'Week':
-                        console.log(e);
                         removeClass();
                         divs[2].classList.add("selected-tab");
                         todoArray.WeekCheck();

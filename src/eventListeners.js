@@ -1,3 +1,4 @@
+import savedStorage from "./storage";
 
 const eventListeners = () => {
 
@@ -116,16 +117,19 @@ const eventListeners = () => {
 
 
         checkbox.forEach(box => {
-
             box.addEventListener("click", (e) => {
+
+
                 if (e.target.checked) {
 
                     array[e.target.parentNode.dataset.id].checked = true
+                    savedStorage().saveTodo(e.target.parentNode.dataset.id, array[e.target.parentNode.dataset.id]);
                     e.target.parentNode.classList.add("strike");
                     console.log(array[e.target.parentNode.dataset.id].checked)
                 }
                 else {
                     array[e.target.parentNode.dataset.id].checked = false;
+                    savedStorage().saveTodo(e.target.parentNode.dataset.id, array[e.target.parentNode.dataset.id]);
                     e.target.parentNode.classList.remove("strike");
                 }
             })
