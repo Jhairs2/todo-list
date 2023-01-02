@@ -210,9 +210,8 @@ header {
 }
 
 .todo-container>* {
-    width: 150px;
+    width: clamp(8rem, 5.5258rem + 10.9966vw, 16rem);
     height: auto;
-    overflow-block: auto;
 }
 
 img {
